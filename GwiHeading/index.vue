@@ -1,0 +1,71 @@
+<script>
+  export default {
+    render: function (createElement) {
+      return createElement('h' + this.markupLevelInternal, {class: {'gwi-text__heading': true, ['gwi-text__heading--' + this.stylingLevel]: true}}, this.$slots.default)
+    },
+    props: {
+      markupLevel: {
+        default: 3
+      },
+      stylingLevel: {
+        default: 3
+      }
+    },
+    computed: {
+      markupLevelInternal () {
+        return Number(this.markupLevel)
+      }
+    }
+  }
+</script>
+
+<style lang="scss">
+  @import '../../styling/themes/material/gwi/variables';
+  .gwi-text {
+    &__heading {
+      color: $color__text--highlight;
+      margin-top: 0;
+      margin-bottom: 1em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+
+      &:first-child {
+        margin-top: .5em;
+      }
+      @media screen and (max-width: 600px) {
+        margin-bottom: .5em;
+        &:first-child {
+          margin-top: .3em;
+        }
+      }
+      &--1 {
+        font-size: 80px;
+        font-weight: 300;
+        line-height: 1.3;
+        @media screen and (max-width: 600px) {
+          font-size: 40px;
+          line-height: 1;
+        }
+      }
+      &--2 {
+        font-size: 40px;
+        @media screen and (max-width: 600px){
+          font-size: 30px;
+        }
+      }
+      &--3 {
+        font-size: 30px;
+        @media screen and (max-width: 600px){
+          font-size: 26px;
+        }
+      }
+      &--4 {
+        color: lighten($color__text--main, 10%);
+        font-weight: 600;
+        line-height: 1;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+</style>
