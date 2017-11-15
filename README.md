@@ -10,6 +10,6 @@ npm install gwi-vue-components
 
 ```html
 <script>
-  import GwiCard from 'gwi-vue-component/GwiCard'
+  import GwiCard from 'gwi-vue-component/GwiCard/index.vue'
 </script>
 ```
