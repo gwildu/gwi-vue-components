@@ -43,8 +43,8 @@
 </script>
 
 <style lang="scss">
-  @import '../../styling/themes/material/gwi/variables';
-  @import '../../styling/themes/material/mixins/elevation';
+  @import '../styling/themes/material/gwi/variables';
+  @import '../styling/themes/material/mixins/elevation';
   .gwi-card {
     background-color: white;
     margin: 0 auto 30px auto;
