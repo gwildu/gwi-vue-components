@@ -1,4 +1,4 @@
-@import '../gwi/variables';
+@import '../variables/index';
 @mixin elevation ($level) {
 
   @if $level == 1 {
