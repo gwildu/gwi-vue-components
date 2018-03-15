@@ -20,7 +20,7 @@
 </script>
 
 <style lang="scss">
-  @import '../styling/themes/material/gwi/variables';
+  @import '../theme/index';
   .gwi-text {
     &__heading {
       color: $color__text--highlight;
