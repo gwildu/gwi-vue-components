@@ -44,13 +44,14 @@
 
 <style lang="scss">
   @import '../theme/index';
+
   .gwi-card {
     background-color: white;
     margin: 0 auto 30px auto;
-    padding: $spacing__components-inner--default;
+    padding: $spacing__component-inner--default;
     /*overflow: hidden;*/
     @media screen and (max-width: 600px){
-      padding: $spacing__components-inner--small;
+      padding: $spacing__component-inner--small;
     }
     &--no-padding {
       padding: 0;

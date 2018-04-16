@@ -20,7 +20,9 @@
 </script>
 
 <style lang="scss">
+  @import '../theme/attributes/components/GwiHeading';
   @import '../theme/index';
+
   .gwi-text {
     &__heading {
       color: $color__text--highlight;
@@ -38,7 +40,7 @@
         }
       }
       &--1 {
-        font-size: 80px;
+        font-size: $heading__font-size--1;
         font-weight: 300;
         line-height: 1.3;
         @media screen and (max-width: 600px) {

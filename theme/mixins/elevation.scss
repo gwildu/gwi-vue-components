@@ -1,6 +1,6 @@
-@import '../variables/index';
-@mixin elevation ($level) {
+@import '../attributes/index';
 
+@mixin elevation ($level) {
   @if $level == 1 {
     box-shadow: 0 1px 3px rgba($color__shadow--base,0.12), 0 1px 2px rgba($color__shadow--base,0.24);
   } @else if $level == 2 {
@@ -12,11 +12,10 @@
   } @else if $level == 5 {
     box-shadow: 0 19px 38px rgba($color__shadow--base,0.30), 0 15px 12px rgba($color__shadow--base,0.22);
   }
-
 }
 
 @mixin card-frame ($level) {
-  border-radius: $border__radius--main;
+  border-radius: $box__border-radius--main;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   @include elevation($level);
 }
