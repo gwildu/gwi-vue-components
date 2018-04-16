@@ -1,5 +1,6 @@
-@import './reset/index';
-@import './variables/index';
-@import './globals/index';
-@import './typography/index';
-@import './mixins/index';
+// Import overrides from parent
+@import '../../theme_custom/index';
+
+// Import modules
+@import 'attributes/index';
+@import 'mixins/index';
