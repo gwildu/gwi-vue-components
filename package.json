@@ -1,6 +1,6 @@
 {
   "name": "gwi-vue-components",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "commonly used vue gui components",
   "repository": "https://github.com/gwildu/gwi-vue-components.git",
   "author": "@gwildu",
