@@ -20,7 +20,6 @@ It is possible to theme components and also the global stylings and mixins. The 
 
 As a first start copy the template folder from this package `./theme/theme_custom/` to your root directory. Your folder structure should look like this:
 ```
-
 ├ theme_custom
   ├ attributes
     ├ common
