@@ -13,3 +13,25 @@ npm install gwi-vue-components
   import GwiCard from 'gwi-vue-component/GwiCard/index.vue'
 </script>
 ```
+
+## Theming
+
+It is possible to theme components and also the global stylings and mixins. The first setup is a bit ugly but from then on it should be straight forward and offer you a very flexible way to do advanced themes.
+
+As a first start copy the template folder from this package `./theme/theme_custom/` to your root directory. Your folder structure should look like this:
+```
+
+├ theme_custom
+    ├ attributes
+        ├ common
+            └ index.scss
+        ├ components
+            ├ <component1>.scss
+            ├ <component2>.scss
+            ├ ...
+        └ index.scss
+    └ mixins
+        ├ <mixins1>.scss
+        ├ <mixins2>.scss
+        ├ ...
+```
