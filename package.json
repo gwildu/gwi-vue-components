@@ -9,11 +9,13 @@
     "vue": "^2.5.3"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "css-loader": "^0.28.11",
     "node-sass": "^4.9.0",
     "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.7",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "vue-loader": "^15.0.11"
   }
 }
