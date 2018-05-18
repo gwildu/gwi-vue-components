@@ -7,3 +7,17 @@ p {
     margin-bottom: 0;
   }
 }
+
+.gwi-spacing__margin--top {
+  margin-top: $spacing__component-outer--default !important;
+  @media screen and (max-width: $breakpoint__s) {
+    margin-top: $spacing__component-outer--small !important;
+  }
+}
+
+.gwi-spacing__margin--bottom {
+  margin-bottom: $spacing__component-outer--default !important;
+  @media screen and (max-width: $breakpoint__s) {
+    margin-bottom: $spacing__component-outer--small !important;
+  }
+}

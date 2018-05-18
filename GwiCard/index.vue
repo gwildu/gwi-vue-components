@@ -2,6 +2,8 @@
   <div
     :class="{
       'gwi-card--no-padding': !padding,
+      'gwi-spacing__margin--top': marginTop,
+      'gwi-spacing__margin--bottom': marginBottom,
       ['gwi-card gwi-card--' + level]: true,
       ['gwi-card__layout--' + layout]: layout
     }"
@@ -15,10 +17,7 @@
     props: {
       padding: {
         default: true,
-        type: [String, Boolean],
-        validator: (value) => {
-          return typeof value === 'boolean' || value === 'true' || value === 'false'
-        }
+        type: [Boolean]
       },
       level: {
         default: 1
@@ -32,11 +31,14 @@
           return allowedValues.indexOf(value) > -1
         },
         default: 'stretch'
-      }
-    },
-    computed: {
-      noPaddingInner () {
-        return typeof this.noPadding === 'boolean' ? this.noPadding : this.noPadding === 'true'
+      },
+      marginTop: {
+        type: [Boolean],
+        default: false
+      },
+      marginBottom: {
+        type: [Boolean],
+        default: true
       }
     }
   }
@@ -45,12 +47,14 @@
 <style lang="scss">
   @import '../theme/index';
 
+  @import '../theme/attributes/components/GwiCard';
+
   .gwi-card {
-    background-color: white;
-    margin: 0 auto 30px auto;
+    background-color: $card__color--background;
+    margin: 0 auto;
     padding: $spacing__component-inner--default;
     /*overflow: hidden;*/
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: $breakpoint__s){
       padding: $spacing__component-inner--small;
     }
     &--no-padding {
