@@ -1,7 +1,10 @@
 <script>
   export default {
     render: function (createElement) {
-      return createElement('h' + this.markupLevelInternal, {class: {'gwi-text__heading': true, ['gwi-text__heading--' + this.stylingLevel]: true}}, this.$slots.default)
+      return createElement('h' + this.markupLevelInternal, {class: {
+        'gwi-text__heading': true,
+          'gwi-spacing__heading-margin--top': this.marginTop,['gwi-text__heading--' + this.stylingLevel]: true
+      }}, this.$slots.default)
     },
     props: {
       markupLevel: {
@@ -9,6 +12,10 @@
       },
       stylingLevel: {
         default: 3
+      },
+      marginTop: {
+        type: [Boolean],
+        default: true
       }
     },
     computed: {
@@ -20,53 +27,43 @@
 </script>
 
 <style lang="scss">
-  @import '../theme/attributes/components/GwiHeading';
   @import '../theme/index';
 
+  @import '../theme/attributes/components/GwiHeading';
+
+  .gwi-spacing {
+    &__heading-margin {
+      &--top {
+        &:first-child {
+          margin-top: $spacing__heading-top-first--default;
+          @media screen and (max-width: $breakpoint__s) {
+            margin-top: $spacing__heading-top-first--small;
+          }
+        }
+      }
+    }
+  }
   .gwi-text {
     &__heading {
       color: $color__text--highlight;
-      margin-top: 0;
-      margin-bottom: 1em;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+      margin-top: $spacing__heading-top--default;
+      margin-bottom: $spacing__heading-bottom--default;
+      text-shadow: $typography__shadow--heading;
 
-      &:first-child {
-        margin-top: .5em;
-      }
-      @media screen and (max-width: 600px) {
-        margin-bottom: .5em;
-        &:first-child {
-          margin-top: .3em;
-        }
+      @media screen and (max-width: $breakpoint__s) {
+        margin-bottom: $spacing__heading-bottom--small;
       }
       &--1 {
-        font-size: $heading__font-size--1;
-        font-weight: 300;
-        line-height: 1.3;
-        @media screen and (max-width: 600px) {
-          font-size: 40px;
-          line-height: 1;
-        }
+        @include heading--1;
       }
       &--2 {
-        font-size: 40px;
-        @media screen and (max-width: 600px){
-          font-size: 30px;
-        }
+        @include heading--2;
       }
       &--3 {
-        font-size: 30px;
-        @media screen and (max-width: 600px){
-          font-size: 26px;
-        }
+        @include heading--3;
       }
       &--4 {
-        color: lighten($color__text--main, 10%);
-        font-weight: 600;
-        line-height: 1;
-        &:first-child {
-          margin-top: 0;
-        }
+        @include heading--4;
       }
     }
   }

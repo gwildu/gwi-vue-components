@@ -1,16 +1,16 @@
 /* RAW COLORS */
 
 // GOLD
-$color__gold--1: rgb(195, 157, 0);
+$color__gold--1: rgb(195, 157, 0) !default;
 // BROWN
-$color__brown--1: rgb(93, 69, 25);
-$color__brown--2: rgb(239, 235, 233);
+$color__brown--1: rgb(93, 69, 25) !default;
+$color__brown--2: rgb(239, 235, 233) !default;
 // BLUE
 $color__blue--1: rgb(59, 96, 255) !default;
 $color__blue--2: rgb(20, 82, 183) !default;
 $color__blue--3: rgb(19, 34, 58) !default;
 // GREY
-$color__grey--1: rgb(250, 250, 248);
+$color__grey--1: rgb(250, 250, 248) !default;
 
 /* TEXT COLORS */
 $color__text--main: $color__blue--3 !default;
@@ -29,3 +29,4 @@ $color__background--dark: lighten($color__blue--3, 5%) !default;
 /* SHADOW COLORS */
 $color__shadow--base: $color__blue--3 !default;
 $color__shadow--main: lighten($color__shadow--base, 0%) !default;
+

@@ -1,3 +1,40 @@
+@import '../common/index';
+
+// first import for overriding !default variables (see also second import at the bottom...
 @import '../../../../../theme_custom/attributes/components/GwiHeading';
 
-$heading__font-size--1: 80px !default;
+@mixin heading--1 {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1.3;
+  @media screen and (max-width: $breakpoint__s) {
+    font-size: 40px;
+    line-height: 1;
+  }
+}
+
+@mixin heading--2 {
+  font-size: 40px;
+  @media screen and (max-width: $breakpoint__s){
+    font-size: 30px;
+  }
+}
+
+@mixin heading--3 {
+  font-size: 30px;
+  @media screen and (max-width: $breakpoint__s){
+    font-size: 26px;
+  }
+}
+
+@mixin heading--4 {
+  color: lighten($color__text--main, 10%);
+  font-weight: 600;
+  line-height: 1;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// second import for overriding mixins
+@import '../../../../../theme_custom/attributes/components/GwiHeading';
