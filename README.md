@@ -22,16 +22,16 @@ As a first start copy the template folder from this package `./theme/theme_custo
 ```
 
 ├ theme_custom
-    ├ attributes
-        ├ common
-            └ index.scss
-        ├ components
-            ├ <component1>.scss
-            ├ <component2>.scss
-            ├ ...
-        └ index.scss
-    └ mixins
-        ├ <mixins1>.scss
-        ├ <mixins2>.scss
-        ├ ...
+  ├ attributes
+    ├ common
+      └ index.scss
+    ├ components
+      ├ <component1>.scss
+      ├ <component2>.scss
+      ├ ...
+    └ index.scss
+  └ mixins
+    ├ <mixins1>.scss
+    ├ <mixins2>.scss
+    ├ ...
 ```
