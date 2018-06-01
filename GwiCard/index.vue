@@ -47,7 +47,7 @@
 <style lang="scss">
   @import '../theme/index';
 
-  @import '../theme/attributes/components/GwiCard';
+  @import './index';
 
   .gwi-card {
     background-color: $card__color--background;

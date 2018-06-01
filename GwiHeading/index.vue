@@ -29,7 +29,7 @@
 <style lang="scss">
   @import '../theme/index';
 
-  @import '../theme/attributes/components/GwiHeading';
+  @import './index';
 
   .gwi-spacing {
     &__heading-margin {

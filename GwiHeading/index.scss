@@ -1,7 +1,7 @@
-@import '../common/index';
+@import '../theme/attributes/common/index';
 
 // first import for overriding !default variables (see also second import at the bottom...
-@import '../../../../../theme_custom/attributes/components/GwiHeading';
+@import '../../../theme_custom/attributes/components/GwiHeading';
 
 @mixin heading--1 {
   font-size: 80px;
@@ -37,4 +37,4 @@
 }
 
 // second import for overriding mixins
-@import '../../../../../theme_custom/attributes/components/GwiHeading';
+@import '../../../theme_custom/attributes/components/GwiHeading';
