@@ -30,7 +30,7 @@
   .row {
     display: flex;
     height: 16.666666666666667%;
-    align-content: stretch;
+    align-items: stretch;
   }
   .red {
     background-color: red;
