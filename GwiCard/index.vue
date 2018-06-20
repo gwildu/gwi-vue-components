@@ -7,9 +7,7 @@
       ['gwi-card gwi-card--' + level]: true,
       ['gwi-card__layout--' + layout]: layout
     }"
-  >
-    <slot />
-  </div>
+  ><slot /></div>
 </template>
 
 <script>
@@ -47,12 +45,13 @@
 <style lang="scss">
   @import '../theme/index';
 
-  @import '../theme/attributes/components/GwiCard';
+  @import './index';
 
   .gwi-card {
     background-color: $card__color--background;
     margin: 0 auto;
     padding: $spacing__component-inner--default;
+    line-height: $typography__line-height--default;
     /*overflow: hidden;*/
     @media screen and (max-width: $breakpoint__s){
       padding: $spacing__component-inner--small;

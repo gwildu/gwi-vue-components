@@ -1,0 +1,133 @@
+// first import for overriding !default variables (see also second import at the bottom...
+@import '../../../theme_custom/attributes/components/GwiCard';
+
+$markdown__heading-font-size--1: 2em;
+$markdown__heading-font-size--2: 1.5em;
+$markdown__heading-font-size--3: 1.2em;
+$markdown__heading-font-size--4: 1em;
+
+$markdown__strong-font-weight: bold;
+$markdown__em-font-style: italic;
+$markdown__link-color--default: rgb(0, 92, 197);
+$markdown__link-color--hovered: darken(rgb(0, 92, 197), 100%);
+$markdown__link-text-decoration: none;
+$markdown__link-cursor: pointer;
+
+$markdown__blockquote-border--color: rgb(220, 220, 240);
+$markdown__blockquote-border-weight: 5px;
+$markdown__blockquote-padding: 0.4545454545em 0 0.4545454545em 0.9090909090em;
+
+$markdown__code-color--default: rgb(30, 35, 40);
+$markdown__code-background-color: rgb(235, 240, 245);
+$markdown__code-block-padding: 1em;
+
+$markdown__list-style--ul: disc !default;
+$markdown__list-style--ol: decimal !default;
+
+$markdown__spacing-bottom--default: .75em !default;
+
+@mixin markdown__heading--1 {
+  font-size: $markdown__heading-font-size--1;
+}
+@mixin markdown__heading--2 {
+  font-size: $markdown__heading-font-size--2;
+}
+@mixin markdown__heading--3 {
+  font-size: $markdown__heading-font-size--3;
+}
+@mixin markdown__heading--4 {
+  font-size: $markdown__heading-font-size--4;
+  font-weight: bold;
+}
+
+@mixin markdown__inline--strong {
+  font-weight: $markdown__strong-font-weight;
+}
+@mixin markdown__inline--em {
+  font-style: $markdown__em-font-style;
+}
+@mixin markdown__inline--a {
+  .markdown {
+    a {
+      color: $markdown__link-color--default;
+      text-decoration: $markdown__link-text-decoration;
+      cursor: $markdown__link-cursor;
+      &:hover {
+        color: $markdown__link-color--hovered;
+      }
+      &:focus, &:active {
+        color: $markdown__link-color--default;
+      }
+      &:visited {
+        color: $markdown__link-color--default;
+        &:hover {
+          color: $markdown__link-color--hovered;
+        }
+      }
+    }
+  }
+}
+
+@mixin markdown__blockquote {
+  border-left: $markdown__blockquote-border-weight solid $markdown__blockquote-border--color;
+  padding: $markdown__blockquote-padding;
+}
+
+@mixin markdown__code {
+  code {
+    background-color: $markdown__code-background-color;
+    color: $markdown__code-color--default;
+    font-size: 0.8em;
+    padding: 0.1em 0.3em;
+    font-family: monospace;
+    display: inline-block;
+  }
+  pre {
+    width: 100%;
+    position: relative;
+    background-color: $markdown__code-background-color;
+    overflow: auto;
+    padding: $markdown__code-block-padding;
+    code {
+      line-height: 1.3;
+      padding: 0 1em 0 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@mixin markdown__image {
+  max-width: 100%;
+}
+
+@mixin markdown__ul {
+  padding-left: 2em;
+  list-style-type: $markdown__list-style--ul;
+  li {
+    margin: 0.5em 0;
+  }
+}
+
+@mixin markdown__ol {
+  padding-left: 2em;
+  list-style-type: $markdown__list-style--ol;
+  li {
+    margin: 0.5em 0;
+  }
+}
+
+@mixin markdown__checklist {
+  div.checkbox {
+    display: flex;
+    margin: .5em 0;
+    input {
+      margin: .2727272727em .8181818181em 0 1.545454545em;
+    }
+    &:last-of-type {
+      margin-bottom: $markdown__spacing-bottom--default;
+    }
+  }
+}
+
+// second import for overriding mixins
+@import '../../../theme_custom/attributes/components/GwiCard';
