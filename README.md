@@ -36,4 +36,4 @@ As a first start copy the template folder from this package `./theme/theme_custo
 ```
 
 Tested with:
-![browserstack logo](https://raw.githubusercontent.com/gwildu/gwi-vue-components/master/media/browserstack-logo.svg?sanitize=true)
+<img alt="browserstack logo" src="https://raw.githubusercontent.com/gwildu/gwi-vue-components/master/media/browserstack-logo.svg?sanitize=true" height="30" />
