@@ -1,4 +1,4 @@
-# A library for custom vue components
+# A library for customizable vue components
 
 ## Install
 
@@ -34,3 +34,6 @@ As a first start copy the template folder from this package `./theme/theme_custo
     ├ <mixins2>.scss
     ├ ...
 ```
+
+Tested with:
+![browserstack logo](https://raw.githubusercontent.com/gwildu/gwi-vue-components/master/media/browserstack-logo.svg?sanitize=true)
