@@ -1,5 +1,8 @@
 # A library for customizable vue components
 
+## Demo
+[demo](https://gwi-vue-components.gwildu.me/)
+
 ## Install
 
 ```bash
@@ -34,6 +37,8 @@ As a first start copy the template folder from this package `./theme/theme_custo
     ├ <mixins2>.scss
     ├ ...
 ```
+
+(code for the demo-page: https://github.com/gwildu/gwi-vue-component-demo)
 
 Tested with:
 
