@@ -22,7 +22,6 @@
         default: 1
       },
       hoverLevel: {
-        type: Number,
         default: undefined
       },
       layout: {
