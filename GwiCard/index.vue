@@ -5,7 +5,8 @@
       'gwi-spacing__margin--top': marginTop,
       'gwi-spacing__margin--bottom': marginBottom,
       ['gwi-card gwi-card--' + level]: true,
-      ['gwi-card__layout--' + layout]: layout
+      ['gwi-card__layout--' + layout]: layout,
+      ['hover hover--' + hoverLevel]: Boolean(hoverLevel)
     }"
   ><slot /></div>
 </template>
@@ -19,6 +20,10 @@
       },
       level: {
         default: 1
+      },
+      hoverLevel: {
+        type: Number,
+        default: undefined
       },
       layout: {
         validator: (value) => {
@@ -86,6 +91,35 @@
     }
     img {
       line-height: 0;
+    }
+  }
+  .hover {
+    transition: all 0.25s ease-in-out;
+
+    &--1 {
+      &:hover {
+        @include card-frame(1);
+      }
+    }
+    &--2 {
+      &:hover {
+        @include card-frame(2);
+      }
+    }
+    &--3 {
+      &:hover {
+        @include card-frame(3);
+      }
+    }
+    &--4 {
+      &:hover {
+        @include card-frame(4);
+      }
+    }
+    &--5 {
+      &:hover {
+        @include card-frame(5);
+      }
     }
   }
 
