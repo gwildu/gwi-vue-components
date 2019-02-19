@@ -191,6 +191,7 @@ export default {
     overflow: hidden;
     margin: 0 auto;
     align-items: center;
+    justify-content: space-around;
   }
   .figure {
     width: 240px;
