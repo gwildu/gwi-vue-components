@@ -66,7 +66,6 @@
           itemprop="associatedMedia"
           itemtype="http://schema.org/ImageObject"
         >
-          <link rel="prefetch" :href="image.src">
           <link rel="prefetch" :href="image.msrc">
           <a
             class="link"
