@@ -1,0 +1,8 @@
+@import '../attributes/common/_colors';
+@mixin link () {
+  text-decoration: none;
+  color: $color__text--link;
+  &:hover, &:active, &:focus {
+    color: $color__text--link-hover;
+  }
+}

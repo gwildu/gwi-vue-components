@@ -1,0 +1,1 @@
+export GwiMenu from './GwiMenu'
